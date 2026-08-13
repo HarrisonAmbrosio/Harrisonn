@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #0a0a0a;
+}
+
+h1 a {
+    color: white;
+    font-style: italic;
+    font-size: 80%;
+    font-family: cursive;
+}
+
+h2 {
+    color: white;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: rgba(224, 221, 221, 0.603);
+}
+
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.aboutContainer {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.aboutImage img {
+    width: 350px;
+    height: 350px;
+
+    object-fit:contain;
+    border-radius: 50%;
+}
+
+.aboutMe {
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto;
+    color: white;
+}
+
+.aboutMe h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.aboutMe p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    nav {
+        position: static;
+        transform: none;
+    }
+
+    ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .aboutContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin: 60px auto;
+    }
+
+
+    .aboutText {
+        width: 100%;
+        order: 1;
+    }
+
+    .aboutImage {
+        order: 2;
+    }
+
+    .aboutImage img {
+        width: 180px;
+        height: 180px;
+        object-fit:contain;
+    }
+
+    .aboutMe h1 {
+        font-size: 36px;
+    }
+    .aboutMe p {
+        font-size: 16px;
+    }
+}

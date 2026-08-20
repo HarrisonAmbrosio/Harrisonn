@@ -5,31 +5,45 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     background-color: #0a0a0a;
+    color: white;
 }
 
-h1 a {
+header {
+    width: 100%;
+    background-color: #2A2929;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
     color: white;
     font-style: italic;
     font-size: 80%;
     font-family: cursive;
 }
 
-h2 {
-    color: white;
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: gray;
-}
-
-ul {
+nav ul {
     display: flex;
     gap: 50px;
     list-style: none;
@@ -38,63 +52,70 @@ ul {
 nav a {
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: rgba(224, 221, 221, 0.603);
+    color: rgba(224, 221, 221, 0.6);
 }
 
-
-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-
+.aboutMe {
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
 }
 
-
 .aboutContainer {
     width: 90%;
     max-width: 1100px;
-    margin: 100px auto;
-
+    margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 60px;
 }
 
-
 .aboutImage img {
     width: 350px;
     height: 350px;
-
-    object-fit:contain;
+    object-fit: contain;
     border-radius: 50%;
 }
 
-.aboutMe {
-    width: 90%;
-    max-width: 800px;
-    margin: 100px auto;
-    color: white;
+.aboutText {
+    flex: 1;
 }
 
-.aboutMe h1 {
+.aboutText h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.aboutMe p {
+.aboutText p {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.pageSection {
+    min-height: 100vh;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionContainer {
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.sectionContainer h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.sectionContainer p {
     font-size: 18px;
     color: #ddd;
 }
@@ -104,28 +125,33 @@ nav {
     .container {
         width: 90%;
         flex-direction: column;
-        gap: 20px;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 0;
     }
-
 
     nav {
         position: static;
         transform: none;
     }
 
-    ul {
+    nav ul {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
+    .aboutMe {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
     .aboutContainer {
+        width: 90%;
         flex-direction: column;
         text-align: center;
         gap: 30px;
-        margin: 60px auto;
     }
-
 
     .aboutText {
         width: 100%;
@@ -139,13 +165,27 @@ nav {
     .aboutImage img {
         width: 180px;
         height: 180px;
-        object-fit:contain;
+        object-fit: cover;
     }
 
-    .aboutMe h1 {
+    .aboutText h1 {
         font-size: 36px;
     }
-    .aboutMe p {
+
+    .aboutText p {
+        font-size: 16px;
+    }
+
+    .pageSection {
+        min-height: 100vh;
+        padding: 80px 5%;
+    }
+
+    .sectionContainer h2 {
+        font-size: 36px;
+    }
+
+    .sectionContainer p {
         font-size: 16px;
     }
 }

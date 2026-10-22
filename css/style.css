@@ -42,6 +42,18 @@ header {
     font-size: 80%;
     font-family: cursive;
 }
+ol {
+    padding-left: 20px;
+    margin-left: 0;
+}
+ol {
+    padding-left: 15px;
+    margin-left: 0;
+}
+ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
 
 nav {
     position: absolute;
